@@ -14,3 +14,10 @@ I then registered a forward *hook* for each of the convolutional layer, using wh
 I then show a method to access the output of any layer in the network without the using any hooks. This was done by directly accessing the layers through the *_modules* variable of the *nn.Module* class.
 
 An advantage of the second method is that it allows us direct access to the individual layers in the neural network which then also enables us to see the weights learned by the kernels of any channel that layer. This too has been demostrated in the last section of the this notebook. 
+
+## Feature Visualization by Optimization.ipynb
+
+In this notebook I try to visualize the features learnt the layer in a pretrained GoogLeNet by implementing the *activation maximization* technique proposed in [this](http://www.image-net.org/papers/imagenet_cvpr09.pdf) paper.
+
+
+Based on the discussion in [this](https://distill.pub/2017/feature-visualization/) post. 
