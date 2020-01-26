@@ -21,3 +21,5 @@ In this notebook I try to visualize the features learnt the layer in a pretraine
 
 
 Based on the discussion in [this](https://distill.pub/2017/feature-visualization/) post. 
+
+This is work in progress. 
