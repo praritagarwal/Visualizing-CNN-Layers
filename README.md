@@ -5,6 +5,8 @@ Project to visualize the kernels and the outputs of the individual layers of a C
 
 ## Visualizing CNN Layers.ipynb
 
+This was my first attempt at visualizing the features learnt by the layers of a neural net. 
+
 In this notebook, I trained a simple neural network on the MNIST dataset. My architecture consisting of 2 Convolutional layers and one linear layer. 
 
 I then registered a forward *hook* for each of the convolutional layer, using which I was able to obtain the output produced by that layer in response to an image-input to the network. This was based on [this](https://discuss.pytorch.org/t/visualize-feature-map/29597) discussion. We can now analyse this output to see what parts of the input image activate the layer the most.
