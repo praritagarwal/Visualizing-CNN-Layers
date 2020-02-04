@@ -15,6 +15,11 @@ I then show a method to access the output of any layer in the network without th
 
 An advantage of the second method is that it allows us direct access to the individual layers in the neural network which then also enables us to see the weights learned by the kernels of any channel that layer. This too has been demostrated in the last section of the this notebook. 
 
+## AlexNet.ipynb
+
+In this notebook I plotted the kernels that were learnt by first layer of AlexNet. This is equivalent to Figure 3 in [this](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) with the only difference being that the pretrained model available in pytorch is based on a slightly modified architecture as described in [this](https://arxiv.org/abs/1404.5997) paper. For e.g. instead of 96 convolutional neurons there are only 64 neurons in the first layer.  
+
+
 ## Feature Visualization by Optimization.ipynb
 
 In this notebook I try to visualize the features learnt the layer in a pretrained GoogLeNet by implementing the *activation maximization* technique proposed in [this](http://www.image-net.org/papers/imagenet_cvpr09.pdf) paper.
