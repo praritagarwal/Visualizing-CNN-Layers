@@ -27,4 +27,25 @@ In this notebook I try to visualize the features learnt the layer in a pretraine
 
 Based on the discussion in [this](https://distill.pub/2017/feature-visualization/) post. 
 
+### Trial 1: Naive application of activation maximization 
+
+ - This resulted in a high frequency image similar to Fig. 2b in [this](https://arxiv.org/pdf/1904.08939.pdf) paper. It was hard to recognize the features learnt by the layer from this image. 
+
+
+### Trial 2: Activation Maximization with image rescaling 
+ 
+ - It was suggested in [this](https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030) blog and also on page 6 of [this](https://arxiv.org/pdf/1904.08939.pdf) paper that gradually upscaling th image can somewhat ameliorate the appearance of high-frequency objects in the image. I gave this a try but output image was hardly any different from what I got in Trial 1.
+
+
+### Trial 3: Activation Maximization with RMS activation
+
+ - In this trial I simply tried to use Root-Mean-Squared value of the layer/channel output as my activation. This didn't change anything significantly. 
+
+
+### Trial 4: Activation Maximization with L2 reg. for pixel intensities
+
+  - Taking cue from [this](https://arxiv.org/pdf/1312.6034.pdf) paper, I added an L2 regularizer for the pixel intensities. This leads to the introduction of hyperparameter which controls the weightage of the regularizer relative to the activation of the layer/channel. I tried various values ranging from 0 to 30 in steps of 5. However, the results didn't change much except that the regularizer caused the background of the final image to become suppressed. 
+
+
+
 This is work in progress. 
