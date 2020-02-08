@@ -63,6 +63,9 @@ In all the trials listed below I considered the activation of unit 11 in the out
 
   - Given that none of the above trails (1 to 6) produced significantly different results on unit 11 of 'inception4a' layer, I tried to look at unit 225 in trial 6. This resulted in an image which contained structures that looked like 'eyes'.   
 
+### Trial 7: Training images that maximally activate neurons
+
+Trying to download Imagenet dataset. Need authorization from ImageNet. 
 
 
 This is work in progress. 
