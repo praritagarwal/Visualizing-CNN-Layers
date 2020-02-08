@@ -27,6 +27,8 @@ In this notebook I try to visualize the features learnt the layer in a pretraine
 
 Based on the discussion in [this](https://distill.pub/2017/feature-visualization/) post. 
 
+In all the trials listed below I considered the activation of unit 11 in the output of 'inception4a' layer of GoogLeNet, unless stated  otherwise. 
+
 ### Trial 1: Naive application of activation maximization 
 
  - This resulted in a high frequency image similar to Fig. 2b in [this](https://arxiv.org/pdf/1904.08939.pdf) paper. It was hard to recognize the features learnt by the layer from this image. 
@@ -45,6 +47,21 @@ Based on the discussion in [this](https://distill.pub/2017/feature-visualization
 ### Trial 4: Activation Maximization with L2 reg. for pixel intensities
 
   - Taking cue from [this](https://arxiv.org/pdf/1312.6034.pdf) paper, I added an L2 regularizer for the pixel intensities. This leads to the introduction of hyperparameter which controls the weightage of the regularizer relative to the activation of the layer/channel. I tried various values ranging from 0 to 30 in steps of 5. However, the results didn't change much except that the regularizer caused the background of the final image to become suppressed. 
+
+
+### Trial 5: Activation Maximization with image scaling and L2 reg. for pixel intensities
+
+  - In this trial I combined image rescaling as was done in Trial 2 and L2 reg. for pixel intensities as was done in Trial 4. 
+
+### Trial 6: Act. Max. with image scaling + pxl. intensity reg. + reg. for gradients in the image
+
+  - As was done in [this](https://arxiv.org/pdf/1412.0035.pdf) paper I included a regularization term for image gradients. 
+
+  - In order to compute image gradients, I created a 2d conv. layer which were initialized with [Scharr filters](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html#formulation). This 2d conv. layer acts on an RGB image (i.e. in_channels = 3) and produces 6 out_channels corresponding to the x and y-deirvatives for each of the color channel in the input image
+
+  - The reg. term simply consists of a root-mean-squared value of all the gradients in the input image. 
+
+  - Given that none of the above trails (1 to 6) produced significantly different results on unit 11 of 'inception4a' layer, I tried to look at unit 225 in trial 6. This resulted in an image which contained structures that looked like 'eyes'.   
 
 
 
