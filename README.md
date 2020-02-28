@@ -61,9 +61,9 @@ In all the trials listed below I considered the activation of unit 11 in the out
 
   - The reg. term simply consists of a root-mean-squared value of all the gradients in the input image. 
 
-  - Given that none of the above trails (1 to 6) produced significantly different results on unit 11 of 'inception4a' layer, I tried to look at unit 225 in trial 6. This resulted in an image which contained structures that looked like 'eyes'.  
+  - Given that none of the above trails (1 to 6) produced significantly different results on unit 11 of 'inception4a' layer, I tried to look at unit 225 in trial 6. This resulted in an image which contained structures that looked like 'eyes'.  Following are the results from various magnification epochs: 
 
-  ![](imagesfromactivationmax/array.png)
+![Images for unit 11 of 'inception4a' in GoogLeNet](imagesfromactivationmax/array.png)
 
 ### Trial 7: Training images that maximally activate neurons
 
@@ -74,4 +74,21 @@ This is work in progress.
 
 
 ## Visualizing layers of GoogLeNet.ipynb
-In this notebook, I applied the techniques learnt from my trials in 'Activation Maximization.ipynb' to visualize the features learnt by various CNN layers in GoogLeNet. 
+In this notebook, I applied the techniques learnt from my trials in 'Activation Maximization.ipynb' to visualize the features learnt by various CNN layers in GoogLeNet. Following are the visualizations corresponding to the top-10 most activated units in each layer of GoogLeNet:
+
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download.png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(1).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(2).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(3).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(4).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(5).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(6).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(7).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(8).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(9).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(10).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(11).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(12).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(13).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(14).png)
+![](top10%20units%20in%20each%20layer%20of%20GoogLeNet/download%20(15).png)
