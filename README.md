@@ -69,3 +69,7 @@ Trying to download Imagenet dataset. Need authorization from ImageNet.
 
 
 This is work in progress. 
+
+
+## Visualizing layers of GoogLeNet.ipynb
+In this notebook, I applied the techniques learnt from my trials in 'Activation Maximization.ipynb' to visualize the features learnt by various CNN layers in GoogLeNet. 
